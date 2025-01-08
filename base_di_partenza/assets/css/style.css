@@ -6,6 +6,7 @@ body {
   padding: 15px;
   background-image: url("../img/sfondo.png");
   background-position: center center;
+  position: relative;
 }
 
 * {
@@ -15,7 +16,36 @@ body {
 hr {
   display: none;
 } /* rimuove l'elemento */
+.sideButton {
+  font-size: 2em;
+  border: 2px white solid;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.486);
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  right: -10px;
+  z-index: 999;
+}
+.sideButton i{
+  position: absolute;
+  top:15%;
+  right: 8px;
+}
+.createLink{
+top: 20px;
+}
+.calendar{
+top: 80px
+}
+.goUp{
+  bottom: 20px;
+}
 
+/* .sideButton i {
+  position: absolute;
+  right: 0;
+} */
 /* HEADER */
 header {
   background: rgb(0, 160, 198);
@@ -27,8 +57,18 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  position: sticky;
+  top: 0;
+  z-index: 666;
 }
-
+section{
+  position: relative;
+}
+section h2 {
+  position:absolute;
+  left: 20px;
+  top: -20px;
+}
 @media screen and (min-width: 800px) {
   header {
     padding: 1em;
@@ -137,6 +177,12 @@ h1 + p {
   color: #a0a0a0;
 }
 
+.calendar, .createLink {
+  color: #2D5FBF;
+}
+.goUp{
+  color: #f7555d;
+}
 @media screen and (max-width: 499px) {
   p,
   ul,
@@ -187,6 +233,7 @@ h1 + p {
   border: 4px solid #00a0c6;
   outline: 4px solid #a02571;
   padding: 3px;
+  float: left;
 }
 ul,
 ol {
@@ -311,8 +358,15 @@ aside div {
   border: 1px solid #c3c3c3;
   margin-bottom: 1em;
   padding: 1em;
+  position: relative;
 }
-
+aside .fa-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #CECECE;
+  font-size: 4em;
+}
 @media screen and (min-width: 1200px) {
   aside div {
     display: inline-block;
@@ -385,4 +439,17 @@ footer a {
   .toTop {
     display: none;
   }
+}
+@media screen and (max-width: 700px) {
+  .createLink{
+    top: unset;
+    bottom: 80px;
+    }
+    .calendar{
+    top: unset;
+    bottom: 140px;
+    }
+    .goUp{
+      bottom: 20px;
+    }
 }
